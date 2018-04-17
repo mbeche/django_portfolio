@@ -1,6 +1,7 @@
 
 <!doctype html>
 <html lang="en">
+{% load staticfiles %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +27,7 @@
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="#">Twitter</a>
             <a class="nav-item nav-link" href="#">LinkedIn</a>
-            <a class="nav-item nav-link" href="#">Resume</a>
+            <a class="nav-item nav-link" href="{% static 'MJohnson CV_dev2.pdf'%}">Resume</a>
             <a class="nav-item nav-link" href="#">Blog</a>
           </div>
         </div>
@@ -44,6 +45,7 @@
           <p>
             <a href="mailto:mb.johnsonbece@gmail.com" class="btn btn-primary my-2">E-mail Me</a>
           </p>
+          <img src="{% static 'johnson_michael.jpg'%}" height=200 />
         </div>
       </section>
 
