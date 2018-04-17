@@ -17,9 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+import wordcount.views
 import jobs.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', jobs.views.home, name='home'),
+    path('count/', wordcount.views.home, name='homepage'),
+    path('counted/', wordcount.views.count, name='count'),
+    path('about/', wordcount.views.about, name='about'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
